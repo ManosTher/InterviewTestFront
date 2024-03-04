@@ -1,5 +1,5 @@
 export async function getHouses(): Promise<any> {
-    const res = await fetch('http://localhost:8080/houses/');
+    const res = await fetch('https://interviewtestserverman-a395f7e9e80c.herokuapp.com/houses/');
 
     if (!res.ok) {
         throw new Error('Failed to fetch data');
@@ -11,7 +11,7 @@ export async function getHouses(): Promise<any> {
 
 
 export async function getHouseByName(name: string): Promise<any> {
-    const res = await fetch(`http://localhost:8080/houses/?name=${name}`);
+    const res = await fetch(`https://interviewtestserverman-a395f7e9e80c.herokuapp.com/houses/?name=${name}`);
 
     if (!res.ok) {
         throw new Error('Failed to fetch data');
@@ -20,7 +20,7 @@ export async function getHouseByName(name: string): Promise<any> {
 }
 
 export async function addHouse(house: any): Promise<any> {
-    const res = await fetch('http://localhost:8080/houses/', {
+    const res = await fetch('https://interviewtestserverman-a395f7e9e80c.herokuapp.com/houses/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
